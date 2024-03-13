@@ -207,9 +207,20 @@ body {
 #left {
   height: 100%;
   width: 55%;
-  background-image: url(https://i.pinimg.com/564x/08/db/7f/08db7fdc0b152d25f05465764f1cbefb.jpg);
-  background-size: contain;
-  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#left img{
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#left h2{
+  font-size: 2.5vw;
+  font-family: Monument;
 }
 #right {
   height: 100%;
@@ -241,3 +252,65 @@ body {
   font-weight: 500;
   letter-spacing: -1px;
 }
+#page3 {
+  width: 99.1vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 6.3vw 4vw;
+}
+.page3-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.page3-left img{
+  width: 50%;
+  height:50%;
+  object-fit: cover;
+  padding-top: 25px;
+} 
+
+.page3-left p{
+  font-size:1.3vw;
+  font-weight: 550;
+}
+.page3-right {
+  width: 50%;
+  height: 100%;
+  background-color: crimson;
+}
+.page3-right img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+#page4{
+  height: 100vh;
+  width: 99.1vw;
+  padding: 10vw 5vw;
+  padding-top: 5vw;
+  position: relative;
+}
+#page4 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#page4 h4{
+  position: absolute;
+  font-size: 1.3vw;
+  font-weight: 500;
+  width: fit-content;
+  padding: 10px 15px;
+  border: 1.5px solid black;
+  border-radius: 45%;
+  top: 11.7%;
+  right:6%;
+}
+
