@@ -122,20 +122,19 @@ body {
 }
 #page1-extended {
   width: 99.1vw;
-  height: fit-content;
+  height: 70vh;
+  margin-top: 2%;
 }
 #scroll {
-  width: fit-content;
+  width: 100%;
   height: 40vh;
-  margin-top: 50px;
+  white-space: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
-  white-space: nowrap;
 }
 #container {
   height: 100%;
   width: 100%;
-  padding: 1.5%;
   display: inline-block;
   animation-name: anim;
   animation-duration: 7s;
@@ -143,12 +142,11 @@ body {
   animation-iteration-count: infinite;
 }
 #container img {
-  height: 95%;
-  width: 17%;
+  height: 100%;
+  width: 20%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top;
-  margin-right: 65px;
+  margin: 0 2.5%;
 }
 @keyframes anim {
   from {
@@ -161,12 +159,12 @@ body {
 
 #alpha {
   width: 100%;
-  height: 100px;
+  height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5%;
-  padding: 0 5vw;
+  padding: 0 2vw;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -179,14 +177,13 @@ body {
   letter-spacing: 4px;
 }
 #alpha h3 {
-  height: 40px;
-  width: 40px;
+  font-size: 1.1vw;
   margin-right: 1.3vw;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 50%;
   font-weight: 500;
   color: rgb(143, 142, 142);
@@ -232,12 +229,25 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
-#left img {
+.p2l-img {
   height: 90%;
+  width: 100%;
+  overflow: hidden;
+  transition: all ease 1s;
+}
+#left img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top;
   border-radius: 2px solid black;
+}
+.hv:hover {
+  scale: 1.05;
+  overflow: hidden;
+}
+.p2l-img:hover #left h2 {
+  display: none;
 }
 #left h2 {
   font-size: 2.5vw;
@@ -252,6 +262,7 @@ body {
   height: 70%;
   object-fit: cover;
   object-position: 30% 43%;
+  transition: all ease 1s;
 }
 .right-bottom {
   height: 30%;
@@ -294,6 +305,14 @@ body {
   object-fit: cover;
   padding-top: 25px;
   border-radius: 2px solid black;
+  animation: rotate 7s linear infinite;
+
+
+}
+@keyframes rotate {
+  100%{
+    rotate: 360deg;
+  }
 }
 
 .page3-left p {
@@ -303,7 +322,8 @@ body {
 .page3-right {
   width: 50%;
   height: 100%;
-  background-color: crimson;
+  overflow: hidden;
+  transition: all ease 1s;
 }
 .page3-right img {
   height: 100%;
@@ -325,6 +345,7 @@ body {
   object-fit: cover;
   object-position: top;
   border-radius: 2px solid black;
+  transition: all ease 1s;
 }
 #page4 h4 {
   position: absolute;
@@ -414,6 +435,8 @@ body {
   background-size: cover;
   background-position: top;
   border-radius: 2px solid black;
+  transition: all ease 1s;
+  overflow: hidden;
 }
 #page6-left {
   height: 100%;
@@ -443,6 +466,7 @@ body {
   height: 57%;
   display: flex;
   justify-content: space-between;
+
 }
 #page6-image img {
   height: 100%;
@@ -450,6 +474,7 @@ body {
   object-fit: cover;
   object-position: top;
   border-radius: 2px solid black;
+  transition: all ease 1s;
 }
 #page7 {
   height: 100%;
@@ -464,6 +489,7 @@ body {
   object-fit: cover;
   object-position: center;
   border-radius: 2px solid black;
+  transition: all ease 1s;
 }
 #page7 h4 {
   position: absolute;
@@ -490,6 +516,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 2px;
+  transition: all ease 1s;
 }
 #page8-right {
   height: 100%;
@@ -505,6 +532,7 @@ body {
   object-fit: cover;
   object-position: top;
   border-radius: 2px;
+  transition: all ease 1s;
 }
 #p8r-content {
   height: 30%;
@@ -525,13 +553,13 @@ body {
   font-size: 1.05vw;
 }
 #page9 {
-  height: 100%;
+  height:100%;
   width: 100%;
   padding: 0.1px;
 }
 #marque {
   width: 100%;
-  height: 12%;
+  height: 12vh;
   margin-top: 5%;
   white-space: nowrap;
   overflow-x: hidden;
@@ -595,99 +623,107 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 2px;
+  transition: all ease 1s;
 }
-#footer {
-  width: 100%;
+#footer{
   height: 40%;
-  display: flex;
+  width: 100%;
+  padding: 0 4vw;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+}
+.upper-footer{
+  height: 85%;
+  width: 100%;
+  display: flex;
+}
+.footer-l{
+  height: 100%;
+  width: 50%;
+  padding: 2vw 0;
+}
+.footer-l h1{
+  
+  font-family: Monument;
+  font-size: 2.0vw;
+  letter-spacing: -3px;
+  position: relative;
   margin-bottom: 2vw;
 }
-#footer-left {
+.footer-l button{
+  font-size: 1.5vw;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin-right: 2%;
+  margin-bottom: 2vw;
+  transition: all ease-in-out 0.5s;
+}
+
+.footer-l button:hover{
+  background-color: #87DB1c;
+}
+.socials{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.socials i{
+  font-size: 1.5vw;
+  padding: 15px;
+  background-color: rgb(206, 201, 201);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.footer-r{
   height: 100%;
-  width: 40%;
+  width: 50%;
+  padding: 2vw 0;
   display: flex;
-  border-right: 2px solid black;
-}
-#footer-left h1 {
-  height: 30%;
-  width: 70%;
-  font-family: Monument;
-  font-size: 2.3vw;
-  letter-spacing: -3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-#footer-left h1::after {
-  content: "©️";
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1vw;
-  position: absolute;
-  top: 26%;
-  right: 26%;
-  font-weight: 500;
-}
-#footer-left h2 {
-  height: 30%;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3vw;
-  font-weight: 500;
-}
-#footer-center {
-  height: 100%;
-  width: 20%;
-  border-right: 2px solid black;
-}
-#footer-center h2 {
-  height: 30%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3vw;
-  font-weight: 500;
-}
-#footer-right {
-  height: 100%;
-  width: 40%;
-}
-#footer-right h2 {
-  height: 30%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3vw;
-  font-weight: 500;
-  border-bottom: 2px solid black;
-}
-.contacts{
-  height: 70%;
-  width: 100%;
-  padding: 10%;
-}
-.social {
-  width: 100%;
-  height: 30%;
-  margin-top: 3%;
-  display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
+  gap: 9%;
   
 }
-.social i {
-  color: #857e7e;
+
+#special{
   font-size: 1.5vw;
-margin-right: 5%;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.377);
+  position: relative;
 }
-.contacts p{
-  font-size: 1.1vw;
-  margin-top: 1.5vw;
-  color: #857e7e;
+#specia h4{
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.377);
+  
+}
+#special::after{
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: rgba(0, 0, 0, 0.377);
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  text-decoration: underline;
+  transition:linear 0.5s;
+ 
+}
+#special:hover::after{
+  width: 100%;
+}
+.lower-footer{
+  height: 10%;
+  width: 100%;
+  display: flex;align-items: center;
+  justify-content: space-between;
 
 }
+.l-footer h4{
+  font-weight: 500;
+  font-size: 1.01vw;
+}
+
