@@ -18,6 +18,7 @@ body {
 #page1 {
   height: 100%;
   width: 100%;
+  padding-top:0.1px ;
 }
 #nav {
   width: 100%;
@@ -63,6 +64,9 @@ body {
   border: none;
   width: 13%;
 }
+#nav h3{
+  display: none;
+}
 
 #content {
   width: 100%;
@@ -79,7 +83,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 #overlay {
   width: 100%;
   height: 40%;
@@ -121,7 +124,7 @@ body {
   height: 2vw;
 }
 #page1-extended {
-  width: 99.1vw;
+  width: 100%;
   height: 70vh;
   margin-top: 2%;
 }
@@ -211,6 +214,9 @@ body {
 #alpha h3:hover {
   color: #000;
   border: 1px solid #000;
+}
+#alpha h4{
+  display: none;
 }
 #page2 {
   height: 100vh;
@@ -306,11 +312,9 @@ body {
   padding-top: 25px;
   border-radius: 2px solid black;
   animation: rotate 7s linear infinite;
-
-
 }
 @keyframes rotate {
-  100%{
+  100% {
     rotate: 360deg;
   }
 }
@@ -466,7 +470,6 @@ body {
   height: 57%;
   display: flex;
   justify-content: space-between;
-
 }
 #page6-image img {
   height: 100%;
@@ -553,7 +556,7 @@ body {
   font-size: 1.05vw;
 }
 #page9 {
-  height:100%;
+  height: 100%;
   width: 100%;
   padding: 0.1px;
 }
@@ -625,32 +628,31 @@ body {
   border-radius: 2px;
   transition: all ease 1s;
 }
-#footer{
+#footer {
   height: 40%;
   width: 100%;
   padding: 0 4vw;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
-.upper-footer{
+.upper-footer {
   height: 85%;
   width: 100%;
   display: flex;
 }
-.footer-l{
+.footer-l {
   height: 100%;
   width: 50%;
   padding: 2vw 0;
 }
-.footer-l h1{
-  
+.footer-l h1 {
   font-family: Monument;
-  font-size: 2.0vw;
+  font-size: 2vw;
   letter-spacing: -3px;
   position: relative;
   margin-bottom: 2vw;
 }
-.footer-l button{
+.footer-l button {
   font-size: 1.5vw;
   padding: 15px 20px;
   background-color: transparent;
@@ -661,23 +663,23 @@ body {
   transition: all ease-in-out 0.5s;
 }
 
-.footer-l button:hover{
-  background-color: #87DB1c;
+.footer-l button:hover {
+  background-color: #87db1c;
 }
-.socials{
+.socials {
   display: flex;
   align-items: center;
   width: 100%;
   gap: 20px;
 }
-.socials i{
+.socials i {
   font-size: 1.5vw;
   padding: 15px;
   background-color: rgb(206, 201, 201);
   border-radius: 50%;
   border: 2px solid black;
 }
-.footer-r{
+.footer-r {
   height: 100%;
   width: 50%;
   padding: 2vw 0;
@@ -685,22 +687,20 @@ body {
   flex-direction: column;
   align-items: end;
   gap: 9%;
-  
 }
 
-#special{
+#special {
   font-size: 1.5vw;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.377);
   position: relative;
 }
-#specia h4{
+#specia h4 {
   font-size: 1.5vw;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.377);
-  
 }
-#special::after{
+#special::after {
   content: "";
   height: 3px;
   width: 0%;
@@ -709,21 +709,114 @@ body {
   left: 0%;
   bottom: 0%;
   text-decoration: underline;
-  transition:linear 0.5s;
- 
+  transition: linear 0.5s;
 }
-#special:hover::after{
+#special:hover::after {
   width: 100%;
 }
-.lower-footer{
+.lower-footer {
   height: 10%;
   width: 100%;
-  display: flex;align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-
 }
-.l-footer h4{
+.l-footer h4 {
   font-weight: 500;
   font-size: 1.01vw;
 }
+@media (max-width: 600px) {
+  #page1 {
+    height: fit-content;
+    width: 100%;
+  }
+  #nav {
+    height: 7vh;
+    margin-top: 7%;
+    padding: 0 4vw;
+  }
+  #nav h1 {
+    width: 20%;
+    font-size: 4.5vw;
+    letter-spacing: -1px;
 
+  }
+  #nav h1::after {
+    display: none;
+  }
+  #nav h2 {
+    display: none;
+  }
+  #nav h3{
+    display: block;
+  }
+  #content {
+    height: 35vh;
+  }
+  .over1 h1 {
+    font-size: 4vw;
+  }
+  .over1 h2 {
+    font-size:13px;
+    padding: 10px;
+  }
+  .over2 h2 {
+    font-weight: 500;
+    font-size: 3vw;
+  }
+  .over2 img {
+    height: 5vw;
+  }
+  #page1-extended {
+    height: 13vh;
+    background-color: #87db1c;
+  }
+  #scroll {
+    height: 100%;
+  }
+
+  #alpha {
+  display: none;
+}
+#page2 {
+  height: 100%;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  background-color: red;
+}
+#left {
+  height: 40%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.p2l-img {
+  height: 90%;
+  width: 100%;
+  overflow: hidden;
+  transition: all ease 1s;
+}
+#left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 2px solid black;
+}
+.hv:hover {
+  scale: 1.05;
+  overflow: hidden;
+}
+
+#left h2 {
+  font-size: 2.5vw;
+  font-family: Monument;
+}
+}
